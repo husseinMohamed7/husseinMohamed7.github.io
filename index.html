@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Hussein Mohamed</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="is-preload">
+
+  <!-- Sidebar -->
+  <nav class="sidebar" id="sidebar">
+    <button class="close-btn" onclick="toggleSidebar()">×</button>
+    <div class="sidebar-header">
+      <img src="assets/imgs/004.jpeg" alt="Profile Photo" class="profile-photo-small">
+      <h2>Hussein Mohamed</h2>
+      <p>Data Engineer</p>
+    </div>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Menu Button -->
+  <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+
+  <!-- Main Card -->
+  <div id="wrapper">
+    <div id="main">
+      <header id="header">
+        <img src="assets/imgs/004.jpeg" alt="Profile Photo" class="profile-photo">
+        <h1>Hussein | حُســــين</h1>
+        <p>Data Engineer</p>
+        <nav>
+          <ul class="social-links">
+            <li><a href="https://www.linkedin.com/in/hussein-mohamed7/"><img src="assets/icons/001.png" alt="LinkedIn"></a></li>
+            <li><a href="https://github.com/husseinMohamed7"><img src="assets/icons/002.png" alt="Github"></a></li>
+            <li><a href="mailto:hussein7mohamed8@gmail.com"><img src="assets/icons/003.png" alt="Email"></a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("active");
+      document.getElementById("header").classList.toggle("hidden");
+    }
+    window.onload = () => document.body.classList.remove('is-preload');
+  </script>
+</body>
+</html>
