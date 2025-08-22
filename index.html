@@ -1,55 +1,221 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="ar">
+
 <head>
-  <title>Hussein Mohamed</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hussein Mohamed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="imgs/001.ico">
 </head>
-<body class="is-preload">
 
-  <!-- Sidebar -->
-  <nav class="sidebar" id="sidebar">
-    <button class="close-btn" onclick="toggleSidebar()">×</button>
-    <div class="sidebar-header">
-      <img src="assets/imgs/004.jpeg" alt="Profile Photo" class="profile-photo-small">
-      <h2>Hussein Mohamed</h2>
-      <p>Data Engineer</p>
-    </div>
-    <ul>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="my-image">
+                <img src="imgs/004.jpeg" alt="حسين محمد" class="main-image">
+                <img src="imgs/002.svg" alt="icon" class="hover-icon">
+            </div>
+            <div class="Main">
+                <h1>Hussein | حُســـين</h1>
+                <p>Data Engineer</p>
+            </div>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/hussein-mohamed7/" class="icon-link" target="_blank">
+                    <i class="fab fa-linkedin-in icon"></i>
+                </a>
+                <a href="https://github.com/husseinMohamed7" class="icon-link" target="_blank">
+                    <i class="fab fa-github icon"></i>
+                </a>
+            </div>
 
-  <!-- Menu Button -->
-  <button class="menu-btn" onclick="toggleSidebar()">☰</button>
-
-  <!-- Main Card -->
-  <div id="wrapper">
-    <div id="main">
-      <header id="header">
-        <img src="assets/imgs/004.jpeg" alt="Profile Photo" class="profile-photo">
-        <h1>Hussein | حُســــين</h1>
-        <p>Data Engineer</p>
+        </div>
+        <!-- Navigation -->
         <nav>
-          <ul class="social-links">
-            <li><a href="https://www.linkedin.com/in/hussein-mohamed7/"><img src="assets/icons/001.png" alt="LinkedIn"></a></li>
-            <li><a href="https://github.com/husseinMohamed7"><img src="assets/icons/002.png" alt="Github"></a></li>
-            <li><a href="mailto:hussein7mohamed8@gmail.com"><img src="assets/icons/003.png" alt="Email"></a></li>
-          </ul>
+            <div class="container">
+                <ul>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#skills">My skills</a></li>
+                    <li><a href="#projects">My projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </nav>
-      </header>
-    </div>
-  </div>
+    </header>
 
-  <script>
-    function toggleSidebar() {
-      document.getElementById("sidebar").classList.toggle("active");
-      document.getElementById("header").classList.toggle("hidden");
-    }
-    window.onload = () => document.body.classList.remove('is-preload');
-  </script>
+
+    <!-- About Section -->
+    <section id="about" class="egyptian-pattern">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Computer and Systems Engineering graduate, passionate about Data Engineering and Systems Design.
+                        Currently training at ITI in the Data Engineering track, focusing on data pipelines, big data,
+                        and system optimization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Tools & Skills</h2>
+            <div class="container">
+                <div class="tools-grid">
+                <i class="fab fa-python" title="Python"></i>
+                <i class="fas fa-database" title="Microsoft SQL Server"></i>
+                <i class="fas fa-leaf" title="MongoDB"></i>
+                <i class="fab fa-git-alt" title="Git"></i>
+                <i class="fab fa-docker" title="Docker"></i>
+                <i class="fa-brands fa-linux" title="Linux"></i>
+                <i class="fas fa-terminal" title="Shell Scripting"></i>
+                </div>
+
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Computer Engineering</h3>
+                    <p>Data Structures & Algorithms, OOP, Operating Systems, Computer Networks</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Databases & SQL</h3>
+                    <p>Microsoft SQL Server, Query Optimization, Database Design, Data Modeling</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>NoSQL</h3>
+                    <p>Working with MongoDB for flexible schema design and scalable data handling</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Programming</h3>
+                    <p>Python, Shell Scripting for automation and data processing</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Data Tools</h3>
+                    <p>ETL Processes, Pandas for cleaning, transforming, and preparing datasets</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Version Control & Deployment</h3>
+                    <p>Managing projects with Git and deploying containers using Docker</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Platforms</h3>
+                    <p>Experience with Linux systems for development and deployment</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Others</h3>
+                    <p>Agile Methodologies, Visualization with Apache Superset</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="egyptian-pattern">
+        <div class="container">
+            <h2 class="section-title">My projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="imgs/005.jpg" alt="Telco-ACIDShield">
+                    </div>
+                    <div class="project-content">
+                        <h3>Telco-ACIDShield</h3>
+                        <p>A simplified telecom billing system built on SQL Server, showcasing ACID-compliant
+                            transactions via a safe <code>SubscribeToBundle</code> stored procedure, modular schemas,
+                            and robust error handling with rollback.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/husseinMohamed7/Telco-ACIDShield" class="view-project"
+                                target="_blank" rel="noopener">
+                                <span>View on GitHub</span>
+                                <i class="fab fa-github icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="imgs/006.png">
+                    </div>
+                    <div class="project-content">
+                        <h3>My Stock Monitor</h3>
+                        <p>A personal tool to analyze and track investments on the Egyptian Exchange (EGX): measures
+                            performance over time, monitors portfolio growth, and evaluates decisions using structured
+                            data and lightweight analytics.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/husseinMohamed7/myStockMonitor" class="view-project"
+                                target="_blank" rel="noopener">
+                                <span>View on GitHub</span>
+                                <i class="fab fa-github icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="imgs/007.jpg" alt="Trrrash">
+                    </div>
+                    <div class="project-content">
+                        <h3>Trrrash</h3>
+                        <p>A lightweight Bash alternative to <code>rm</code> that safely moves files to a custom trash
+                            folder instead of deleting permanently.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/husseinMohamed7/trrrash" class="view-project" target="_blank"
+                                rel="noopener">
+                                <span>View on GitHub</span>
+                                <i class="fab fa-github icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">كلمني</h2>
+            <p dir="rtl">تقدر تتواصل معايا في أي وقت للتعاون في مشروع، مناقشة فكرة، أو حل مشكلة.</p>
+            <div class="contact-links-down">
+                <a href="https://wa.me/+201554954628" class="icon-link" target="_blank">
+                    <i class="fab fa-whatsapp icon"></i>
+                </a>
+                <a href="mailto:hussein7mohamed8@gmail.com" class="icon-link">
+                    <i class="fas fa-envelope icon"></i>
+                </a>
+            </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p dir="rtl">
+
+                قال الشيخ عبد ربه التائه: جاءني قوم و قالوا إنهم قرَّروا التوقف حتى يعرفوا معنى الحياة، فقلت لهم:
+                تحرَّكوا دون إبطاء؛ فالمعنى كامن في الحركة.
+            </p>
+            <p dir="rtl">
+                نجيب محفوظ, أصداء السيرة الذاتية
+            </p>
+        </div>
+    </footer>
 </body>
+
 </html>
