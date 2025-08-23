@@ -78,8 +78,7 @@ header {
     justify-content: center;
     gap: 50px;
     margin-top: 20px;
-
-
+    padding-bottom: 50px;
 }
 
 /* Navigation */
