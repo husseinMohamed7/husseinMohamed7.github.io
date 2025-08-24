@@ -45,7 +45,7 @@ header {
 
 .hover-icon {
     position: absolute;
-    bottom: -303px;
+    bottom: -253px;
     right: -150px;
     width: 200px;
     height: 200px;
@@ -360,8 +360,8 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
     header {
-        padding-bottom: 50px;
-        height: 100vh;
+        padding-bottom: 0;
+        height: 100dvh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -379,12 +379,16 @@ footer {
 
     .hover-icon {
         position: absolute;
-        bottom: -352px;
+        bottom: -302px;
         right: 26px;
         width: 150px;
         height: 150px;
         opacity: 0;
         transform: scale(1);
         transition: all 0.4s ease;
+    }
+
+    .contact-links {
+        padding-bottom: 0;
     }
 }
