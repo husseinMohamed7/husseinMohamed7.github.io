@@ -380,13 +380,12 @@ footer {
     .hover-icon {
         position: fixed;
         bottom: 0;
-        left: 50%;
-        transform: translateX(-50%) scale(1);
+        left: 67%;
         width: 150px;
         height: 150px;
         opacity: 0;
+        transform: scale(1);
         transition: all 0.4s ease;
-        pointer-events: none;
     }
 
     .contact-links {
