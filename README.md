@@ -3,7 +3,7 @@
 This is a responsive personal portfolio website built with **HTML**, **CSS**. 
 It is clean, reusable, and easy to customize for anyone who wants to showcase their work online.
 
-## Live Demo
+## The Website
 [View Website](https://husseinMohamed7.github.io)
 
 ## License
