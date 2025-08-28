@@ -53,6 +53,7 @@
                     <li><a href="#about">About me</a></li>
                     <li><a href="#skills">My skills</a></li>
                     <li><a href="#projects">My projects</a></li>
+                    <li><a href="#blogs">Blogs</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -63,7 +64,7 @@
     <!-- About Section -->
     <section id="about" class="egyptian-pattern">
         <div class="container">
-            <div class="card">
+            <div class="about-card">
                 <div class="about-content">
                     <div class="about-text">
                         <p>
@@ -143,70 +144,128 @@
     </section>
 
 
-    <!-- Projects Section -->
-    <section id="projects" class="egyptian-pattern">
-        <div class="container">
-            <h2 class="section-title">My projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="imgs/005.jpg" alt="Telco-ACIDShield">
-                    </div>
-                    <div class="project-content">
-                        <h3>Telco-ACIDShield</h3>
-                        <p>A simplified telecom billing system built on SQL Server, showcasing ACID-compliant
-                            transactions via a safe <code>SubscribeToBundle</code> stored procedure, modular schemas,
-                            and robust error handling with rollback.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/husseinMohamed7/Telco-ACIDShield" class="view-project"
-                                target="_blank" rel="noopener">
-                                <span>View on GitHub</span>
-                                <i class="fab fa-github icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="imgs/006.png">
-                    </div>
-                    <div class="project-content">
-                        <h3>My Stock Monitor</h3>
-                        <p>A personal tool to analyze and track investments on the Egyptian Exchange (EGX): measures
-                            performance over time, monitors portfolio growth, and evaluates decisions using structured
-                            data and lightweight analytics.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/husseinMohamed7/myStockMonitor" class="view-project"
-                                target="_blank" rel="noopener">
-                                <span>View on GitHub</span>
-                                <i class="fab fa-github icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="imgs/007.jpg" alt="Trrrash">
-                    </div>
-                    <div class="project-content">
-                        <h3>Trrrash</h3>
-                        <p>A lightweight Bash alternative to <code>rm</code> that safely moves files to a custom trash
-                            folder instead of deleting permanently.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/husseinMohamed7/trrrash" class="view-project" target="_blank"
-                                rel="noopener">
-                                <span>View on GitHub</span>
-                                <i class="fab fa-github icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+<!-- Projects Section -->
+<section id="projects" class="egyptian-pattern">
+  <div class="container">
+    <h2 class="section-title">My Projects</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-image">
+          <img src="imgs/005.jpg" alt="Telco-ACIDShield">
         </div>
+        <div class="card-content">
+          <h3>Telco-ACIDShield</h3>
+          <p>A simplified telecom billing system built on SQL Server, showcasing ACID-compliant
+            transactions via a safe <code>SubscribeToBundle</code> stored procedure, modular schemas,
+            and robust error handling with rollback.</p>
+          <div class="card-links">
+            <a href="https://github.com/husseinMohamed7/Telco-ACIDShield" class="view-card"
+              target="_blank" rel="noopener">
+              <span>View on GitHub</span>
+              <i class="fab fa-github icon"></i>
+            </a>
+          </div>
         </div>
-    </section>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="imgs/006.png" alt="My Stock Monitor">
+        </div>
+        <div class="card-content">
+          <h3>My Stock Monitor</h3>
+          <p>A personal tool to analyze and track investments on the Egyptian Exchange (EGX): measures
+            performance over time, monitors portfolio growth, and evaluates decisions using structured
+            data and lightweight analytics.</p>
+          <div class="card-links">
+            <a href="https://github.com/husseinMohamed7/myStockMonitor" class="view-card"
+              target="_blank" rel="noopener">
+              <span>View on GitHub</span>
+              <i class="fab fa-github icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="imgs/007.jpg" alt="Trrrash">
+        </div>
+        <div class="card-content">
+          <h3>Trrrash</h3>
+          <p>A lightweight Bash alternative to <code>rm</code> that safely moves files to a custom trash
+            folder instead of deleting permanently.</p>
+          <div class="card-links">
+            <a href="https://github.com/husseinMohamed7/trrrash" class="view-card"
+              target="_blank" rel="noopener">
+              <span>View on GitHub</span>
+              <i class="fab fa-github icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Blogs Section -->
+<section id="blogs" class="egyptian-pattern2">
+  <div class="container">
+    <h2 class="section-title">My Blogs</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-image">
+          <img src="imgs/blog1.png" alt="Blog 1">
+        </div>
+        <div class="card-content">
+          <h3>Power BI, Tableau vs Apache Superset: A Look at Open-Source Data Viz</h3>
+          <p>This article compares commercial data visualization tools like Power BI and Tableau with the open-source alternative, Apache Superset, based on a user's firsthand experience.</p>
+          <div class="card-links">
+            <a href="blogs/blog1.html" class="view-card" target="_blank" rel="noopener">
+              <span>Read More</span>
+              <i class="fas fa-arrow-right icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="imgs/blog2.png" alt="Blog 2">
+        </div>
+        <div class="card-content">
+          <h3>Daily Backup SQL Server Using Cron Jobs</h3>
+          <p>This guide explains how to perform daily backups of a SQL Server database on Docker using a cron job, without needing SQL Server Agent.</p>
+          <div class="card-links">
+            <a href="https://www.linkedin.com/posts/hussein-mohamed7_docker-sqlabrserver-cronabrjobs-activity-7364209435965120512-HPx4" class="view-card" target="_blank" rel="noopener">
+              <span>Read More</span>
+              <i class="fab fa-linkedin-in icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="imgs/blog3.png" alt="Blog 3">
+        </div>
+        <div class="card-content">
+          <h3>ITI Data Engineering Learning Journey</h3>
+          <p>Simple notes and experiments from my learning during the ITI Data Engineering ICC Program 4-Months.</p>
+          <div class="card-links">
+            <a href="https://github.com/husseinMohamed7/data-engineering-journey-ITI" class="view-card" target="_blank" rel="noopener">
+              <span>Read More</span>
+              <i class="fab fa-github icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
