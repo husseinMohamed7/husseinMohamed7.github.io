@@ -603,69 +603,180 @@
             <h2 class="section-title">Architecture Overview</h2>
             <div class="architecture-container">
                 <div class="architecture-img">
-                    <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;">
-                        <!-- Background -->
-                        <rect width="800" height="400" fill="#f5f5f5" />
-
-                        <!-- Source Systems -->
-                        <rect x="20" y="150" width="120" height="100" fill="#112F51" rx="10" />
-                        <text x="80" y="190" text-anchor="middle" fill="#FFD700" font-size="14"
-                            font-weight="bold">Source Data</text>
-                        <text x="80" y="210" text-anchor="middle" fill="#f0cd7b" font-size="11">SQL Server</text>
-                        <text x="80" y="225" text-anchor="middle" fill="#f0cd7b" font-size="11">PostgreSQL</text>
-
-                        <!-- Python ETL -->
-                        <rect x="190" y="150" width="120" height="100" fill="#112F51" rx="10" />
-                        <text x="250" y="190" text-anchor="middle" fill="#FFD700" font-size="14"
-                            font-weight="bold">Python ETL</text>
-                        <text x="250" y="210" text-anchor="middle" fill="#f0cd7b" font-size="11">Data Ingestion</text>
-                        <text x="250" y="225" text-anchor="middle" fill="#f0cd7b" font-size="11">Validation</text>
-
-                        <!-- Snowflake -->
-                        <rect x="360" y="120" width="120" height="160" fill="#112F51" rx="10" />
-                        <text x="420" y="155" text-anchor="middle" fill="#FFD700" font-size="14" font-weight="bold">❄️
-                            Snowflake</text>
-                        <text x="420" y="180" text-anchor="middle" fill="#f0cd7b" font-size="11">Raw</text>
-                        <text x="420" y="200" text-anchor="middle" fill="#f0cd7b" font-size="11">Staging</text>
-                        <text x="420" y="220" text-anchor="middle" fill="#f0cd7b" font-size="11">Analytics</text>
-                        <!-- dbt -->
-                        <rect x="360" y="30" width="120" height="70" fill="#f0cd7b" rx="10" />
-                        <text x="420" y="60" text-anchor="middle" fill="#112F51" font-size="14"
-                            font-weight="bold">dbt</text>
-                        <text x="420" y="80" text-anchor="middle" fill="#112F51" font-size="11">Transformations</text>
-
-                        <!-- Power BI -->
-                        <rect x="530" y="150" width="120" height="100" fill="#112F51" rx="10" />
-                        <text x="590" y="190" text-anchor="middle" fill="#FFD700" font-size="14"
-                            font-weight="bold">Power BI</text>
-                        <text x="590" y="210" text-anchor="middle" fill="#f0cd7b" font-size="11">Dashboards</text>
-                        <text x="590" y="225" text-anchor="middle" fill="#f0cd7b" font-size="11">Analytics</text>
-
-                        <!-- End Users -->
-                        <rect x="700" y="150" width="80" height="100" fill="#f0cd7b" rx="10" />
-                        <text x="740" y="190" text-anchor="middle" fill="#112F51" font-size="14"
-                            font-weight="bold">👥</text>
-                        <text x="740" y="210" text-anchor="middle" fill="#112F51" font-size="11">Business</text>
-                        <text x="740" y="225" text-anchor="middle" fill="#112F51" font-size="11">Users</text>
-
-                        <!-- Arrows -->
-                        <path d="M 140 200 L 190 200" stroke="#FFD700" stroke-width="3" fill="none"
-                            marker-end="url(#arrowhead)" />
-                        <path d="M 310 200 L 360 200" stroke="#FFD700" stroke-width="3" fill="none"
-                            marker-end="url(#arrowhead)" />
-                        <path d="M 420 120 L 420 100" stroke="#FFD700" stroke-width="3" fill="none"
-                            marker-end="url(#arrowhead)" />
-                        <path d="M 480 200 L 530 200" stroke="#FFD700" stroke-width="3" fill="none"
-                            marker-end="url(#arrowhead)" />
-                        <path d="M 650 200 L 700 200" stroke="#FFD700" stroke-width="3" fill="none"
-                            marker-end="url(#arrowhead)" />
-
-                        <!-- Arrow marker -->
+                    <svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Egyptian Pattern Background -->
                         <defs>
-                            <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-                                <polygon points="0 0, 10 3, 0 6" fill="#FFD700" />
+                            <pattern id="egyptPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                                <path d="M0 20 L20 0 L40 20 L20 40 Z" fill="none" stroke="#FFD700" stroke-width="0.5"
+                                    opacity="0.1" />
+                            </pattern>
+
+                            <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#f0cd7b;stop-opacity:1" />
+                            </linearGradient>
+
+                            <filter id="shadow">
+                                <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3" />
+                            </filter>
+
+                            <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto">
+                                <polygon points="0 0, 12 6, 0 12" fill="#FFD700" />
                             </marker>
                         </defs>
+
+                        <!-- Background -->
+                        <rect width="1200" height="600" fill="#f8f6f0" />
+                        <rect width="1200" height="600" fill="url(#egyptPattern)" />
+
+
+                        <!-- 1. SOURCE SYSTEMS -->
+                        <g filter="url(#shadow)">
+                            <rect x="50" y="120" width="160" height="240" fill="#112F51" rx="12" stroke="#FFD700"
+                                stroke-width="2" />
+                            <text x="130" y="155" text-anchor="middle" fill="#FFD700" font-size="16"
+                                font-weight="bold">Source Data</text>
+
+                            <!-- SQL Server DB -->
+                            <ellipse cx="130" cy="195" rx="40" ry="14" fill="#FFD700" opacity="0.8" />
+                            <rect x="90" y="195" width="80" height="35" fill="#FFD700" opacity="0.6" />
+                            <ellipse cx="130" cy="230" rx="40" ry="14" fill="#FFD700" opacity="0.8" />
+                            <text x="130" y="260" text-anchor="middle" fill="#f0cd7b" font-size="13">SQL Server</text>
+
+                            <!-- PostgreSQL DB -->
+                            <ellipse cx="130" cy="290" rx="40" ry="14" fill="#FFD700" opacity="0.8" />
+                            <rect x="90" y="290" width="80" height="35" fill="#FFD700" opacity="0.6" />
+                            <ellipse cx="130" cy="325" rx="40" ry="14" fill="#FFD700" opacity="0.8" />
+                            <text x="130" y="350" text-anchor="middle" fill="#f0cd7b" font-size="13">PostgreSQL</text>
+                        </g>
+
+                        <!-- Arrow 1 -->
+                        <line x1="210" y1="240" x2="260" y2="240" stroke="#FFD700" stroke-width="4"
+                            marker-end="url(#arrowhead)" />
+
+                        <!-- 2. PYTHON ETL -->
+                        <g filter="url(#shadow)">
+                            <rect x="270" y="120" width="160" height="240" fill="#112F51" rx="12" stroke="#FFD700"
+                                stroke-width="2" />
+                            <text x="350" y="155" text-anchor="middle" fill="#FFD700" font-size="16"
+                                font-weight="bold">Python ETL</text>
+
+                            <!-- Python icon simplified -->
+                            <circle cx="350" cy="215" r="35" fill="url(#goldGradient)" />
+                            <text x="350" y="232" text-anchor="middle" fill="#112F51" font-size="36"
+                                font-weight="bold">Py</text>
+
+                            <text x="350" y="280" text-anchor="middle" fill="#f0cd7b" font-size="14">Data
+                                Ingestion</text>
+                            <text x="350" y="305" text-anchor="middle" fill="#f0cd7b" font-size="14">Validation</text>
+                            <text x="350" y="330" text-anchor="middle" fill="#f0cd7b" font-size="14">Quality
+                                Checks</text>
+                        </g>
+
+                        <!-- Arrow 2 -->
+                        <line x1="430" y1="240" x2="480" y2="240" stroke="#FFD700" stroke-width="4"
+                            marker-end="url(#arrowhead)" />
+
+                        <!-- 3. SNOWFLAKE (Main Component) -->
+                        <g filter="url(#shadow)">
+                            <rect x="490" y="100" width="200" height="320" fill="#112F51" rx="12" stroke="#FFD700"
+                                stroke-width="3" />
+
+                            <!-- Snowflake Title -->
+                            <text x="590" y="145" text-anchor="middle" fill="#FFD700" font-size="20"
+                                font-weight="bold">Snowflake</text>
+
+                            <!-- RAW Layer -->
+                            <rect x="515" y="170" width="150" height="60" fill="#1a4d6d" rx="8" stroke="#FFD700"
+                                stroke-width="1" />
+                            <text x="590" y="205" text-anchor="middle" fill="#f0cd7b" font-size="15"
+                                font-weight="bold">RAW Layer</text>
+
+                            <!-- STAGING Layer -->
+                            <rect x="515" y="245" width="150" height="60" fill="#1a4d6d" rx="8" stroke="#FFD700"
+                                stroke-width="1" />
+                            <text x="590" y="280" text-anchor="middle" fill="#f0cd7b" font-size="15"
+                                font-weight="bold">STAGING</text>
+
+                            <!-- ANALYTICS Layer -->
+                            <rect x="515" y="320" width="150" height="60" fill="#1a4d6d" rx="8" stroke="#FFD700"
+                                stroke-width="1" />
+                            <text x="590" y="355" text-anchor="middle" fill="#f0cd7b" font-size="15"
+                                font-weight="bold">ANALYTICS</text>
+                        </g>
+
+                        <!-- 4. DBT (Above Snowflake) -->
+                        <g filter="url(#shadow)">
+                            <rect x="515" y="10" width="150" height="70" fill="url(#goldGradient)" rx="12"
+                                stroke="#112F51" stroke-width="2" />
+                            <text x="590" y="40" text-anchor="middle" fill="#112F51" font-size="20"
+                                font-weight="bold">dbt</text>
+                            <text x="590" y="65" text-anchor="middle" fill="#112F51"
+                                font-size="14">Transformations</text>
+                        </g>
+
+                        <!-- Arrow from Snowflake to dbt -->
+                        <line x1="590" y1="100" x2="590" y2="85" stroke="#FFD700" stroke-width="2"
+                            marker-end="url(#arrowhead)" />
+
+                        <!-- Arrow 3 -->
+                        <line x1="690" y1="240" x2="740" y2="240" stroke="#FFD700" stroke-width="4"
+                            marker-end="url(#arrowhead)" />
+
+                        <!-- 5. POWER BI -->
+                        <g filter="url(#shadow)">
+                            <rect x="750" y="120" width="160" height="240" fill="#112F51" rx="12" stroke="#FFD700"
+                                stroke-width="2" />
+                            <text x="830" y="155" text-anchor="middle" fill="#FFD700" font-size="16"
+                                font-weight="bold">Power BI</text>
+
+                            <!-- Chart icon -->
+                            <rect x="780" y="185" width="25" height="70" fill="#FFD700" opacity="0.8" rx="3" />
+                            <rect x="815" y="210" width="25" height="45" fill="#FFD700" opacity="0.8" rx="3" />
+                            <rect x="850" y="200" width="25" height="55" fill="#FFD700" opacity="0.8" rx="3" />
+
+                            <text x="830" y="285" text-anchor="middle" fill="#f0cd7b" font-size="14">Dashboards</text>
+                            <text x="830" y="310" text-anchor="middle" fill="#f0cd7b" font-size="14">Reports</text>
+                            <text x="830" y="335" text-anchor="middle" fill="#f0cd7b" font-size="14">Analytics</text>
+                        </g>
+
+                        <!-- Arrow 4 -->
+                        <line x1="910" y1="240" x2="960" y2="240" stroke="#FFD700" stroke-width="4"
+                            marker-end="url(#arrowhead)" />
+
+                        <!-- 6. END USERS -->
+                        <g filter="url(#shadow)">
+                            <rect x="970" y="120" width="160" height="240" fill="url(#goldGradient)" rx="12"
+                                stroke="#112F51" stroke-width="2" />
+
+                            <!-- Users icon -->
+                            <circle cx="1020" cy="210" r="25" fill="#112F51" />
+                            <circle cx="1065" cy="210" r="25" fill="#112F51" />
+                            <path d="M 995 235 Q 1020 260 1045 235" fill="#112F51" />
+                            <path d="M 1040 235 Q 1065 260 1090 235" fill="#112F51" />
+
+                            <text x="1050" y="295" text-anchor="middle" fill="#112F51" font-size="17"
+                                font-weight="bold">Business</text>
+                            <text x="1050" y="320" text-anchor="middle" fill="#112F51" font-size="17"
+                                font-weight="bold">Users</text>
+                        </g>
+
+                        <!-- Title -->
+                        <text x="600" y="500" text-anchor="middle" fill="#112F51" font-size="28" font-weight="bold"
+                            font-family="Arial, sans-serif">
+                            Data Pipeline Architecture
+                        </text>
+
+                        <!-- Bottom Description -->
+                        <text x="600" y="530" text-anchor="middle" fill="#112F51" font-size="14" font-style="italic">
+                            Modern ELT Architecture: Extract → Load → Transform → Visualize
+                        </text>
+
+                        <!-- Decorative Egyptian elements -->
+                        <path d="M 30 580 L 50 560 L 70 580" fill="none" stroke="#FFD700" stroke-width="2"
+                            opacity="0.3" />
+                        <path d="M 1130 580 L 1150 560 L 1170 580" fill="none" stroke="#FFD700" stroke-width="2"
+                            opacity="0.3" />
                     </svg>
                 </div>
                 <p class="architecture-description">
@@ -744,9 +855,9 @@
             <div class="demo-container">
                 <div class="demo-intro">
                     <p><strong>Explore the dashboard below</strong> </p>
-                    <div
-                        style="display:flex; justify-content:center; align-items:center; height:500px;">
-                        <img src="../imgs/014.png" alt="NYC Taxi Trip Analysis" style="max-width:100%; max-height:100%;">
+                    <div style="display:flex; justify-content:center; align-items:center; height:500px;">
+                        <img src="../imgs/014.png" alt="NYC Taxi Trip Analysis"
+                            style="max-width:100%; max-height:100%;">
                     </div>
 
                 </div>
